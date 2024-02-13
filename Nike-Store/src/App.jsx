@@ -1,8 +1,12 @@
+import { Hero } from '.components';
+import { heroapi } from './data/data';
+
 const App = () => {
   return (
     <>
-      <h1 className='bg-black text-white text-4xl'>Welcome to Nike Store</h1>
-      <p>Nice to meet you!!!</p>
+      <main>
+        <Hero heroapi={heroapi}/>
+      </main>
     </>
   )
 }
