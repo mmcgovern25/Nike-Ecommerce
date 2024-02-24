@@ -1,9 +1,10 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { selectCartState, setCloseCart } from '../app/CartSlice.js';
 import CartItem from './cart/CartItem'
 import CartCount from './cart/CartCount'
 import CartEmpty from './cart/CartEmpty'
-import { useDispatch, useSelector } from 'react-redux';
-import { selectCartState, setCloseCart } from '../app/CartSlice.js';
+
 
 
 const Cart = () => {
