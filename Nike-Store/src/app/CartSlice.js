@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 const initialState = {
   cartState: false,
-  cartItems: localStorage.getIem("cart") ? JSON.parse(localStorage.getItem('cart')) : [],
+  cartItems: localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [],
 };
 
 const CartSlice = createSlice({
@@ -37,6 +37,7 @@ const CartSlice = createSlice({
 
 export const { setOpenCart, setCloseCart, setAddItemToCart } = CartSlice.actions;
 
-export const selectCartState = (state) => state.cart.cartState
+export const selectCartState = (state) => state.cart.cartState;
+export const selectCartItems = (state) => state.cart.cartItems;
 
 export default CartSlice.reducer;
