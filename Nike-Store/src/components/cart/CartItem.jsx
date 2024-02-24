@@ -20,18 +20,18 @@ const CartItem = ({ item: { id, title, text, img, color, shadow, price, cartQuan
 
             </div>
             <div className='flex items-center justify-around w-full'>
-              <button type='button' className='bg-theme-cart rounded'><MinusIcon className='w-5 h-5 lg:w-4' /></button>
-              <div className=''>{cartQuantity}</div>
-              <button type='button' className=''><PlusIcon className='w-5 h-5' /></button>
+              <button type='button' className='bg-theme-cart rounded w-6 h-6 lg:w-5 lg:h-5 flex items-center jusitfy-center active:scale-90'><MinusIcon className='w-5 h-5 lg:w-4 lg:h-4 text-white stroke-[2]' /></button>
+              <div className='bg-theme-cart rounded text-white font-medium lg:text-xs w-7 h-6 lg:w-5 lg:h-6 flex items-center justofy-center'>{cartQuantity}</div>
+              <button type='button' className='bg-theme-cart rounded w-6 h-6 lg:w-5 lg:h-5 flex items-center jusitfy-center active:scale-90'><PlusIcon className='w-5 h-5 lg:w-4 lg:h-4 text-white stroke-[2]' /></button>
             </div>
           </div>
         </div>
-        <div className=''>
-          <div className=''>
-            <h1>{price * cartQuantity}</h1>
+        <div className='grid items-center gap-5'>
+          <div className='grid items-center justify-center'>
+            <h1 className='text-lg lg:text-base text-slate-900 font-medium'>${price * cartQuantity}</h1>
           </div>
           <div className=''>
-            <button type='button' className=''><TrashIcon className='w-5 h-5'/></button>
+            <button type='button' className='bg-theme-cart rounded text-white p-1 lg:p-0.5 grid items-center justify-items-center'><TrashIcon className='w-5 h-5'/></button>
           </div>
         </div>
       </div>

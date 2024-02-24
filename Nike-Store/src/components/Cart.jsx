@@ -27,7 +27,7 @@ const Cart = () => {
         <div className={`blur-effect-theme h-screen max-w-xl w-full absolute right-0`}>
           <CartCount onCartToggle={onCartToggle}/>
           {cartItems.length === 0 ? <CartEmpty/> : <div>
-              <div>
+              <div className='flex items-start justify-strt flex-col gap-y-7 lg:gap-y-5 overflow-y-scroll h-[81vh] scroll-smooth scroll-hidden'>
                 {cartItems?.map((item, i) => (
                   <CartItem key={i} item={item} />
                 ))}
