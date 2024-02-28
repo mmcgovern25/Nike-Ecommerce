@@ -33,8 +33,8 @@ import youtube from "../assets/youtube.svg";
 import messenger from "../assets/messenger.svg";
 
 const heroapi = {
-  title: "Play With Electric Nike",
-  subtitle: "Adapt 2.0 Sneakers",
+  title: "The Time is Now",
+  subtitle: "JUST DO IT.",
   img: heroimg,
   btntext: "Explore Product",
   videos: [
@@ -125,7 +125,7 @@ const toprateslaes = {
     {
       id: "0M0x2",
       title: "Nike Air Force Green",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product2,
@@ -136,7 +136,7 @@ const toprateslaes = {
     {
       id: "0M0x3",
       title: "Nike Addapt BB Rose",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product3,
@@ -147,7 +147,7 @@ const toprateslaes = {
     {
       id: "0M0x4",
       title: "Nike Air Premium",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product4,
@@ -158,7 +158,7 @@ const toprateslaes = {
     {
       id: "0M0x5",
       title: "Nike Adapt BB Pro",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product5,
@@ -169,7 +169,7 @@ const toprateslaes = {
     {
       id: "0M0x6",
       title: "Air Jordan PR3",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product6,
@@ -180,7 +180,7 @@ const toprateslaes = {
     {
       id: "0M0x7",
       title: "Nike Multi Smart Shoe",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product1,
@@ -191,7 +191,7 @@ const toprateslaes = {
     {
       id: "0M0x8",
       title: "Nike Jordan Air Max",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product9,
@@ -202,7 +202,7 @@ const toprateslaes = {
     {
       id: "0M0x9",
       title: "Nike Old Max-x",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product10,
@@ -213,7 +213,7 @@ const toprateslaes = {
     {
       id: "0M0x10",
       title: "Nike Lime Jordan 11",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product12,
@@ -224,7 +224,7 @@ const toprateslaes = {
     {
       id: "0M0x11",
       title: "Nike Air Black Max",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product11,
@@ -235,7 +235,7 @@ const toprateslaes = {
     {
       id: "0M0x12",
       title: "Nike Zoom Max",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product8,

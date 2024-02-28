@@ -12,6 +12,7 @@ import {
 import CartCount from "./cart/CartCount";
 import CartEmpty from "./cart/CartEmpty";
 import CartItem from "./cart/CartItem";
+import { loadStripe } from "@stripe/stripe-js";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -36,6 +37,34 @@ const Cart = () => {
 
   const onClearCartItems = () => {
     dispatch(setClearCartItems())
+  }
+
+  const makePayment = async ()=> {
+    const stripe = await loadStripe("pk_live_51Oot1iGmgZJWbQ9zUYPEhjtJG6ave00TVyjfFTw7k7Jfzjh45uygCnUBPKqBnayiFVYtVDnjanbH61cIe8W4lYO700syTFRDpK");
+
+    const body = {
+      products: Cart
+    }
+
+    const headers={
+      "Content-Type":"application/json"
+    }
+
+    const response = await fetch(`${apiURL}/create-checkout-session`, {
+      method:"POST",
+      headers:headers,
+      body:JSON.stringify(body)
+    })
+
+    const session = await response.json();
+
+    const result = stripe.redirectToCheckout({
+      sessionId:session.id
+    })
+
+    if (result.error) {
+      console.log(result.error)
+    }
   }
 
   return (
@@ -69,7 +98,7 @@ const Cart = () => {
               </div>
               <div className="grid items-center gap-2">
                 <p className="text-sm font-medium text-center">Taxes and Shipping Will Calculate At Shipping</p>
-                <button type="button" className="button-theme bg-theme-cart text-white">Check Out</button>
+                <button type="button" className="button-theme bg-theme-cart text-white" onClick={makePayment}>Check Out</button>
               </div>
             </div>
 
