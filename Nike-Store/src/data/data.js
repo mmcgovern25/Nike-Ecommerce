@@ -24,8 +24,8 @@ import product9 from "../assets/product9.png";
 import product10 from "../assets/product10.png";
 import product11 from "../assets/product11.png";
 import product12 from "../assets/product12.png";
-
-
+import tshirt1 from "../assets/tshirt1.png";
+import tshirt2 from "../assets/tshirt2.png";
 import facebook from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
 import twitter from "../assets/twitter.svg";
@@ -57,7 +57,7 @@ const popularsales = {
     {
       id: "0p0x1",
       title: "Nike Addapt BB 2.0",
-      text: "MEN Running Shoes",
+      text: "Men's Basketball Shoes",
       rating: "4.9",
       btn: "Buy Now",
       img: psale2,
@@ -68,7 +68,7 @@ const popularsales = {
     {
       id: "0p0x2",
       title: "Nike Martine Rose",
-      text: "MEN Running Shoes",
+      text: "Men's Running Shoes",
       rating: "4.5",
       btn: "Buy Now",
       img: psale1,
@@ -79,7 +79,7 @@ const popularsales = {
     {
       id: "0p0x3",
       title: "Nike Smart Shoe 2.0",
-      text: "MEN Running Shoes",
+      text: "Men's Basketball Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: psale3,
@@ -114,7 +114,7 @@ const toprateslaes = {
     {
       id: "0M0x1",
       title: "Nike Air Low Premium",
-      text: "MEN Running Shoes",
+      text: "Men's Casual Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product7,
@@ -125,7 +125,7 @@ const toprateslaes = {
     {
       id: "0M0x2",
       title: "Nike Air Force Green",
-      text: "Men's Running Shoes",
+      text: "Men's Casual Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product2,
@@ -136,7 +136,7 @@ const toprateslaes = {
     {
       id: "0M0x3",
       title: "Nike Addapt BB Rose",
-      text: "Men's Running Shoes",
+      text: "Men's Basketball Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product3,
@@ -157,8 +157,8 @@ const toprateslaes = {
     },
     {
       id: "0M0x5",
-      title: "Nike Adapt BB Pro",
-      text: "Men's Running Shoes",
+      title: "Nike Adapt Hike Pro",
+      text: "Men's Hiking Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product5,
@@ -169,7 +169,7 @@ const toprateslaes = {
     {
       id: "0M0x6",
       title: "Air Jordan PR3",
-      text: "Men's Running Shoes",
+      text: "Men's Casual Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product6,
@@ -180,7 +180,7 @@ const toprateslaes = {
     {
       id: "0M0x7",
       title: "Nike Multi Smart Shoe",
-      text: "Men's Running Shoes",
+      text: "Men's Basketball Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product1,
@@ -191,7 +191,7 @@ const toprateslaes = {
     {
       id: "0M0x8",
       title: "Nike Jordan Air Max",
-      text: "Men's Running Shoes",
+      text: "Men's Casual Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product9,
@@ -224,7 +224,7 @@ const toprateslaes = {
     {
       id: "0M0x11",
       title: "Nike Air Black Max",
-      text: "Men's Running Shoes",
+      text: "Men's Basketball Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product11,
@@ -235,7 +235,7 @@ const toprateslaes = {
     {
       id: "0M0x12",
       title: "Nike Zoom Max",
-      text: "Men's Running Shoes",
+      text: "Men's Basketball Shoes",
       rating: "5+",
       btn: "Buy Now",
       img: product8,
@@ -243,6 +243,7 @@ const toprateslaes = {
       color: "from-blue-900 to-blue-500",
       shadow: "shadow-lg shadow-blue-500",
     },
+
   ],
 };
 

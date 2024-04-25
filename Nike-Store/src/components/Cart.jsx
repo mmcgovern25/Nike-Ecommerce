@@ -13,6 +13,9 @@ import CartCount from "./cart/CartCount";
 import CartEmpty from "./cart/CartEmpty";
 import CartItem from "./cart/CartItem";
 import { loadStripe } from "@stripe/stripe-js";
+import { popularsales, toprateslaes } from "../data/data.js";
+
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -20,8 +23,6 @@ const Cart = () => {
   const cartItems = useSelector(selectCartItems);
   const totalAmount = useSelector(selectTotalAmount);
   const totalQTY = useSelector(selectTotalQTY);
-
-  // console.log(cartItems)
 
   useEffect(() => {
     dispatch(setGetTotals())
@@ -39,33 +40,32 @@ const Cart = () => {
     dispatch(setClearCartItems())
   }
 
-  const makePayment = async ()=> {
-    const stripe = await loadStripe("pk_live_51Oot1iGmgZJWbQ9zUYPEhjtJG6ave00TVyjfFTw7k7Jfzjh45uygCnUBPKqBnayiFVYtVDnjanbH61cIe8W4lYO700syTFRDpK");
+  const handleCheckout = async () => {
+    // Use stripePromise instead of loading Stripe again
+    const stripe = await stripePromise;
 
-    const body = {
-      products: Cart
+    // Rest of your checkout logic
+    const allProducts = [...popularsales.items, ...toprateslaes.items];
+
+    const lineItems = allProducts.map(item => ({
+      price: item.price_id, // Use the ID of the price (or product) from Stripe
+      quantity: 1,
+    }));
+
+
+    console.log(lineItems);
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: lineItems,
+      mode: "payment",
+      successUrl: "http://localhost:3000/success",
+      cancelUrl: "http://localhost:3000/cancel",
+    });
+
+    if (error) {
+      console.error("Error:", error);
     }
+  };
 
-    const headers={
-      "Content-Type":"application/json"
-    }
-
-    const response = await fetch(`${apiURL}/create-checkout-session`, {
-      method:"POST",
-      headers:headers,
-      body:JSON.stringify(body)
-    })
-
-    const session = await response.json();
-
-    const result = stripe.redirectToCheckout({
-      sessionId:session.id
-    })
-
-    if (result.error) {
-      console.log(result.error)
-    }
-  }
 
   return (
     <>
@@ -98,7 +98,7 @@ const Cart = () => {
               </div>
               <div className="grid items-center gap-2">
                 <p className="text-sm font-medium text-center">Taxes and Shipping Will Calculate At Shipping</p>
-                <button type="button" className="button-theme bg-theme-cart text-white" onClick={makePayment}>Check Out</button>
+                <button type="button" className="button-theme bg-theme-cart text-white" onClick={handleCheckout}>Check Out</button>
               </div>
             </div>
 
